@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { BrandHero, Logo } from '@/components/Brand'
 import { createClient } from '@/lib/supabase/server'
 import { ROLE_LABEL } from '@/lib/constants'
 import { JoinForm } from './JoinForm'
@@ -14,9 +15,8 @@ export default async function JoinPage({ params }: { params: Promise<{ code: str
 
   return (
     <main className="auth">
-      <span className="logo">
-        Groo<span className="v">V</span>
-      </span>
+      <Logo />
+      <BrandHero />
       {info?.valid ? (
         <>
           <div style={{ display: 'grid', gap: 6 }}>

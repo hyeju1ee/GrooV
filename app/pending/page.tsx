@@ -1,4 +1,5 @@
 import { redirect } from 'next/navigation'
+import { Logo } from '@/components/Brand'
 import { getSession } from '@/lib/auth'
 import { logout } from '../login/actions'
 
@@ -12,9 +13,7 @@ export default async function PendingPage() {
   if (profile.status === 'active') redirect('/')
   return (
     <main className="auth">
-      <span className="logo">
-        Groo<span className="v">V</span>
-      </span>
+      <Logo />
       <h1 className="q">
         {profile.status === 'blocked' ? '이용이 멈춘 계정이에요' : `${profile.name}님, 운영진 승인을 기다리고 있어요`}
       </h1>

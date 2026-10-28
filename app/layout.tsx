@@ -1,11 +1,11 @@
 import type { Metadata, Viewport } from 'next'
 import { Suspense } from 'react'
-import { Bricolage_Grotesque, Noto_Sans_KR } from 'next/font/google'
+import { Noto_Sans_KR, Playfair_Display } from 'next/font/google'
 import { Toast } from '@/components/Toast'
 import './globals.css'
 
 const body = Noto_Sans_KR({ weight: ['400', '500', '700', '800'], preload: false, variable: '--font-body', display: 'swap' })
-const logo = Bricolage_Grotesque({ weight: '800', subsets: ['latin'], variable: '--font-logo', display: 'swap' })
+const logo = Playfair_Display({ weight: '900', subsets: ['latin'], variable: '--font-logo', display: 'swap' })
 
 export const metadata: Metadata = {
   title: { default: 'GrooV', template: '%s · GrooV' },

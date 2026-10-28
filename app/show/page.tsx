@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { BrandHero, Logo } from '@/components/Brand'
 import { createClient } from '@/lib/supabase/server'
 import { dlong, hm, todayKST } from '@/lib/date'
 import type { GroovEvent } from '@/lib/types'
@@ -14,9 +15,8 @@ export default async function ShowPage() {
 
   return (
     <main className="auth" style={{ gap: 20 }}>
-      <span className="logo">
-        Groo<span className="v">V</span>
-      </span>
+      <Logo />
+      <BrandHero navy />
       <div style={{ display: 'grid', gap: 6 }}>
         <span className="stepcap">성균관대학교 재즈동아리 그루브</span>
         <h1 className="q">정기공연에 초대합니다</h1>

@@ -13,7 +13,10 @@ export async function AppBar() {
   return (
     <header className="appbar">
       <Link href="/" className="logo" aria-label="GrooV 홈">
-        Groo<span className="v">V</span>
+        <span className="mark" aria-hidden="true" />
+        <span>
+          Groo<span className="v">V</span>
+        </span>
       </Link>
       <span className="spacer" />
       <Link href="/notifications" className="iconbtn" aria-label={count ? `알림 ${count}개` : '알림'}>

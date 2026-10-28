@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { redirect } from 'next/navigation'
+import { BrandHero, Logo } from '@/components/Brand'
 import { getSession } from '@/lib/auth'
 import { LoginForm } from './LoginForm'
 
@@ -10,9 +11,8 @@ export default async function LoginPage() {
   if (user) redirect('/')
   return (
     <main className="auth">
-      <span className="logo">
-        Groo<span className="v">V</span>
-      </span>
+      <Logo />
+      <BrandHero />
       <h1 className="q">
         그루브 라운지에
         <br />
